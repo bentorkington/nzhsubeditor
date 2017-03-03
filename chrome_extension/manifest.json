@@ -7,6 +7,10 @@
         {
             "matches": ["http://www.nzherald.co.nz/*"],
             "js": ["content.js"]
+        },
+        {
+            "matches": ["http://www.nzherald.co.nz/"],
+            "js": ["frontpage.js"]
         }
     ]
 }

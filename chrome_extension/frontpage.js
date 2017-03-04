@@ -16,10 +16,12 @@ for (var i=0; i < headings.length; i++)
 }
 
 var motto = document.createElement("div");
+var mottoText = document.createElement("em");
 var mottoNode = document.createTextNode("Better than Stuff on most days");
 
-motto.appendChild(mottoNode);
-motto.setAttribute("style", "position: relative; bottom: 15px; left: 65px; color: white");
+mottoText.appendChild(mottoNode);
+motto.appendChild(mottoText);
+motto.setAttribute("style", "position: relative; bottom: 12px; left: 65px; margin-bottom:-15px; color: white; font-size: 1.1em; font-family: 'Stag-Serif-Book',Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;");
 
 var logoElement = document.getElementById("logo");
 logoElement.appendChild(motto);

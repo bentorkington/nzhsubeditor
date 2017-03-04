@@ -5,7 +5,7 @@ var taglines = [
     "We didn't want to merge anyway",
 ];
 
-var mottoId = Math.trunc((new Date().getTime() / (1000)) % taglines.length);
+var mottoId = Math.trunc((new Date().getTime() / (3600 * 1000)) % taglines.length);
 
 var motto = document.createElement("div");
 var mottoText = document.createElement("em");

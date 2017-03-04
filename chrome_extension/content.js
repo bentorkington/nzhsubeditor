@@ -23,11 +23,13 @@ logoElement.appendChild(motto);
 // add "Fuck [author's] opinion"
 
 if (document.getElementsByClassName("authorName").length > 0) {
-    var author = document.getElementsByClassName("authorName")[0].innerHTML;
+    var author = document.getElementsByClassName("authorName")[0].children[0].innerHTML;
 
-    var regex = /([A-Za-z ]+[a-z])\s+'(s?) Opinion/;
+    var regex = /\n(.*)\s\n'(s?) Opinion/;
+
+
     var newauthor = author.replace(regex, "Fuck $1'$2 Opinion");
         
-    document.getElementsByClassName("authorName")[0].innerHTML = newauthor;
+    document.getElementsByClassName("authorName")[0].children[0].innerHTML = newauthor;
 }
 

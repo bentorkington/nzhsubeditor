@@ -27,9 +27,14 @@ if (document.getElementsByClassName("authorName").length > 0) {
 
     var regex = /\n(.*)\s\n'(s?) Opinion/;
 
-
-    var newauthor = author.replace(regex, "Fuck $1'$2 Opinion");
-        
-    document.getElementsByClassName("authorName")[0].children[0].innerHTML = newauthor;
+    // Toby is aight
+    if (/\n\s*Toby Manhire.*/.test(author)) {
+        document.getElementsByClassName("authorName")[0].children[0].innerHTML =
+            author.replace(/\s*\n\s*'s Opinion/, "'s Opinion");
+    } 
+    else {
+        var newauthor = author.replace(regex, "Fuck $1'$2 Opinion");
+        document.getElementsByClassName("authorName")[0].children[0].innerHTML = newauthor;
+    }
 }
 

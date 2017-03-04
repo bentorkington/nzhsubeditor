@@ -1,16 +1,18 @@
 {
     "manifest_version": 2,
     "name": "NZH Sub Editor",
-    "version": "0.1",
+    "version": "0.2",
     "description": "A better sub-editor for the NZ Herald",
     "content_scripts": [
         {
             "matches": ["http://www.nzherald.co.nz/*"],
-            "js": ["content.js"]
+            "js": ["content.js"],
+            "run-at": "document_start"
         },
         {
-            "matches": ["http://www.nzherald.co.nz/*"],
-            "js": ["frontpage.js"]
+            "matches": ["http://www.nzherald.co.nz/"],
+            "js": ["frontpage.js"],
+            "run-at": "document_start"
         }
     ]
 }

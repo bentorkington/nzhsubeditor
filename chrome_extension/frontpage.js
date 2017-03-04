@@ -3,28 +3,21 @@ function insertAfter(newNode, referenceNode) {
 }
 
 function findHeading(search) {
-var found;
-var headings = document.getElementsByTagName("h2");
+    var found;
+    var headings = document.getElementsByTagName("h2");
 
-for (var i=0; i < headings.length; i++)
-{
-    if (headings[i].textContent == search) {
-        found = headings[i];
-        return found;
-    }
-}    
+    for (var i=0; i < headings.length; i++) {
+        if (headings[i].textContent == search) {
+            found = headings[i];
+            return found;
+        }
+    }    
 }
 
-var motto = document.createElement("div");
-var mottoText = document.createElement("em");
-var mottoNode = document.createTextNode("Better than Stuff on most days");
-
-mottoText.appendChild(mottoNode);
-motto.appendChild(mottoText);
-motto.setAttribute("style", "position: relative; bottom: 12px; left: 65px; margin-bottom:-15px; color: white; font-size: 1.1em; font-family: 'Stag-Serif-Book',Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;");
-
-var logoElement = document.getElementById("logo");
-logoElement.appendChild(motto);
+function replaceHeading(from, to) {
+    var element = findHeading(from);
+    element.innerHTML = to;
+}
 
 var depthHeader = findHeading("Herald in-depth ");
 
@@ -35,5 +28,6 @@ depth.appendChild(depthText);
 
 insertAfter(depth, depthHeader);
 
-var doMiss = findHeading("Don't miss ");
-doMiss.innerHTML = "Do miss ";
+replaceHeading("Don't miss ", "Do miss");
+replaceHeading("Must read ", "Mustn't read")
+

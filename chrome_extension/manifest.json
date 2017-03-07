@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "NZH Sub Editor",
-    "version": "0.2",
+    "version": "0.3",
     "description": "A better sub-editor for the NZ Herald",
     	"icons": {
 		"16": "icon_16.png",

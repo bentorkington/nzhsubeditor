@@ -19,15 +19,12 @@ function replaceHeading(from, to) {
     element.innerHTML = to;
 }
 
-var depthHeader = findHeading("Herald in-depth ");
-
-depth = document.createElement("p");
-depthText = document.createTextNode("We'd hoped these three day old stories had got more clicks");
-depth.setAttribute("class", "articleCopy");
-depth.appendChild(depthText);
-
-insertAfter(depth, depthHeader);
-
 replaceHeading("Don't miss ", "Do miss");
 replaceHeading("Must read ", "Mustn't read")
+
+var allContent = document.getElementById("contentWrapper");
+for (var i = 0; i<allContent.children.length; i++) {
+    var div = allContent.children[i];
+    div.innerHTML = div.innerHTML.replace(/([tT])he Herald/, "$1" + "eh Herald");
+}
 

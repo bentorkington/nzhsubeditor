@@ -38,7 +38,3 @@ if (document.getElementsByClassName("authorName").length > 0) {
     }
 }
 
-var paras = document.getElementsByTagName("p");
-for (var i = 0; i < paras.length; ++i) {
-    p.innerText.replace(/([tT])he (<i>)?Herald(<\/i>)?/, "$1" + "eh " + "$2" + "Herald" + "$3");
-}

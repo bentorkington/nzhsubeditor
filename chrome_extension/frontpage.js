@@ -22,9 +22,14 @@ function replaceHeading(from, to) {
 replaceHeading("Don't miss ", "Do miss");
 replaceHeading("Must read ", "Mustn't read")
 
-var allContent = document.getElementById("contentWrapper");
-for (var i = 0; i<allContent.children.length; i++) {
-    var div = allContent.children[i];
-    div.innerHTML = div.innerHTML.replace(/([tT])he Herald/, "$1" + "eh Herald");
+var bn = document.getElementById("breakingNews");
+if (bn) {
+    if (bn.innerText.test(/(died|dead|injure|kill)/)) {
+        bn.removeChild(bn.childNodes[0]);
+        var omg = document.createTextNode("OH MY GOD");
+        var omgSpan = document.createElement("span");
+        omgSpan.setAttribute("class", "title");
+        omgSpan.appendChild(omg);
+        bn.insertBefore(omgSpan, bn.childNodes[0]);
+    }
 }
-

@@ -1,7 +1,7 @@
 // give the Herald a motto: Better than Stuff on most days! Stand proud!
 
 var taglines = [
-    "Better than Stuff on most days",
+    "Better than Stuff most days",
     "We didn't want to merge anyway",
 ];
 

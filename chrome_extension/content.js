@@ -40,7 +40,7 @@ if (document.getElementsByClassName("authorName").length > 0) {
 
 var bn = document.getElementById("breakingNews");
 if (bn) {
-    if (bn.innerText.test(/(died|dead|injure|kill)/)) {
+    if (bn.innerText.match(/(died|dead|injure|kill)/)) {
         bn.removeChild(bn.childNodes[0]);
         var omg = document.createTextNode("OH MY GOD");
         var omgSpan = document.createElement("span");

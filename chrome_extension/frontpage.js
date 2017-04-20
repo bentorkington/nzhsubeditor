@@ -22,3 +22,6 @@ function replaceHeading(from, to) {
 replaceHeading("Don't miss ", "Do miss");
 replaceHeading("Must read ", "Mustn't read")
 
+inDepthPic = chrome.extension.getURL('assets/indepth.png');
+
+replaceHeading("Herald in-depth ", "<img src=\"" + inDepthPic + "\"/>");

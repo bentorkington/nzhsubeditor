@@ -8,6 +8,7 @@
 		"48": "icon_48.png",
 		"128": "icon_128.png"
 	},
+    "permissions" : ["cookies", "*://*.nzherald.co.nz/*"],
     "content_scripts": [
         {
             "matches": ["http://www.nzherald.co.nz/*"],
@@ -15,7 +16,7 @@
             "run-at": "document_start"
         },
         {
-            "matches": ["http://www.nzherald.co.nz/"],
+            "matches": ["http://*.nzherald.co.nz/"],
             "js": ["frontpage.js"],
             "run-at": "document_start"
         }
